@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.App {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.form-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input {
+  font-size: 16px;
+  padding: 15px;
+  border: 2px solid #1c88b6;
+  border-radius: 4px;
+}
+
+button {
+  font-size: 16px;
+  padding: 15px;
+  border: 2px solid #1c88b6;
+  border-radius: 4px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.btn_primary {
+  background-color: #1c88b6;
+  color: #fff;
+}
+
+.btn_default {
+  background-color: transparent;
+  color: #1c88b6;
+}
+
+.success-msg {
+  font-size: 18px;
+  text-transform: uppercase;
+}

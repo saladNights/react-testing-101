@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component matches the snapshot 1`] = `
+"<div className=\\"App\\">
+  <div className=\\"form-wrapper\\">
+    <div>
+      <button className=\\"btn_primary\\" onClick={[Function]} data-testid=\\"subscribe\\">
+        Подписаться на рассылку
+      </button>
+    </div>
+  </div>
+</div>"
+`;
