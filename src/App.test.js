@@ -16,7 +16,8 @@ describe('Component', () => {
   	}
   };
 	const props = {
-		onSubscribe: jest.fn()
+		onSubscribe: jest.fn(),
+		success: false
 	};
 
   beforeEach(() => {
@@ -33,8 +34,22 @@ describe('Component', () => {
 
 	it('show form', () => {
 		const subscribeBtn = findByTestAttr(wrapper, 'subscribe');
+
 		subscribeBtn.simulate('click');
+
 		const form = findByTestAttr(wrapper, 'subscribe-form');
+
+		expect(form.length).toBe(1);
+	});
+
+	// Тестирование реализации: bad example
+	it('show form', () => {
+		const subscribeBtn = wrapper.find('.subscribe-btn');
+
+		subscribeBtn.simulate('click');
+
+		const form = wrapper.find('.subscribe-form');
+
 		expect(form.length).toBe(1);
 	});
 
@@ -81,6 +96,7 @@ describe('Component', () => {
 		});
 
 		await store.dispatch(subscribe());
+
 		wrapper = wrapper.update();
 
 		const successMessage = findByTestAttr(wrapper, 'success-msg');

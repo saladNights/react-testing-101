@@ -38,9 +38,9 @@ class App extends Component {
             ? <span data-testid="success-msg" className="success-msg">Спасибо за подписку</span>
             : !formVisibility
               ? (<div>
-                  <button className='btn_primary' onClick={this.toggleForm} data-testid="subscribe">Подписаться на рассылку</button>
+                  <button className='btn_primary subscribe-btn' onClick={this.toggleForm} data-testid="subscribe">Подписаться на рассылку</button>
                 </div>)
-              : (<form data-testid="subscribe-form">
+              : (<form data-testid="subscribe-form" className='subscribe-form'>
                   <input data-testid="subscribe-input" type="email" placeholder="Введите e-mail" value={email} onChange={this.changeEmail}/>
                   <button data-testid="subscribe-submit" className='btn_primary' onClick={this.submitForm}>Отправить</button>
                   <button className='btn_default' onClick={this.toggleForm}>Отмена</button>
